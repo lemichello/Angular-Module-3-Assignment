@@ -39,6 +39,10 @@
                 let foundItems = response.data.menu_items;
                 let filteredItems = [];
 
+                if(searchTerm === "") {
+                    return [];
+                }
+
                 for (let item of foundItems) {
                     if (item.description.indexOf(searchTerm) !== -1) {
                         filteredItems.push(item)
