@@ -40,7 +40,7 @@
                 let filteredItems = [];
 
                 for (let item of foundItems) {
-                    if (item.description === searchTerm) {
+                    if (item.description.indexOf(searchTerm) !== -1) {
                         filteredItems.push(item)
                     }
                 }
